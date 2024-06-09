@@ -1,16 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="hangman.HangmanController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hangman.HangmanApp">
+   <children>
+      <AnchorPane layoutX="28.0" layoutY="29.0" prefHeight="556.0" prefWidth="278.0">
+         <children>
+            <Label contentDisplay="CENTER" layoutX="87.0" prefHeight="43.0" prefWidth="127.0" text="LOGIN" textAlignment="CENTER" textFill="#3696df">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="l_username" layoutX="80.0" layoutY="190.0" prefHeight="45.0" prefWidth="198.0" style="-fx-background-color: #EBEDEF;" />
+            <Label layoutY="160.0" text="username">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutY="297.0" prefHeight="39.0" prefWidth="86.0" text="password">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="l_password" layoutX="80.0" layoutY="336.0" prefHeight="45.0" prefWidth="198.0" style="-fx-background-color: #EBEDEF;" />
+            <Button layoutX="113.0" layoutY="452.0" mnemonicParsing="false" onAction="#login" text="login" />
+            <Label fx:id="l_label" alignment="CENTER" layoutY="501.0" prefHeight="30.0" prefWidth="280.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+      <Line endX="-17.0" endY="507.60003662109375" layoutX="345.0" layoutY="50.0" startX="-17.0" startY="-20.400001525878906" stroke="#bc2ca6" />
+      <AnchorPane layoutX="351.0" layoutY="29.0" prefHeight="556.0" prefWidth="292.0">
+         <children>
+            <TextField fx:id="r_username" layoutX="87.0" layoutY="240.0" prefHeight="45.0" prefWidth="198.0" style="-fx-background-color: #EBEDEF;" />
+            <Label layoutX="7.0" layoutY="210.0" text="username">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="331.0" prefHeight="39.0" prefWidth="86.0" text="password">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="r_password" layoutX="87.0" layoutY="370.0" prefHeight="45.0" prefWidth="198.0" style="-fx-background-color: #EBEDEF;" />
+            <TextField fx:id="r_name" layoutX="87.0" layoutY="121.0" prefHeight="45.0" prefWidth="198.0" style="-fx-background-color: #EBEDEF;" />
+            <Label layoutX="7.0" layoutY="91.0" text="name">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button layoutX="119.0" layoutY="452.0" mnemonicParsing="false" onAction="#register" text="signup" />
+            <Label layoutX="75.0" prefHeight="45.0" prefWidth="119.0" text="SIGNUP" textFill="#3696df">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="r_label" alignment="CENTER" layoutX="6.0" layoutY="501.0" prefHeight="30.0" prefWidth="280.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="686.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hangman.Game">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="77.0" prefWidth="572.0" style="-fx-background-color: #EAECEE;">
+         <children>
+            <Label layoutX="14.0" layoutY="10.0" prefHeight="54.0" prefWidth="97.0" text="username :">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="l_username" layoutX="112.0" layoutY="10.0" prefHeight="54.0" prefWidth="114.0" style="-fx-background-color: #D5D8DC;" text="Label" textFill="#6d7781">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="259.0" layoutY="10.0" prefHeight="54.0" prefWidth="114.0" text="number of wins :">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="n_wins" layoutX="373.0" layoutY="11.0" prefHeight="54.0" prefWidth="26.0" style="-fx-background-color: #D5D8DC;" text="10" textFill="#6d7781">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="469.0" layoutY="10.0" prefHeight="54.0" prefWidth="46.0" text="place :">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="place" layoutX="515.0" layoutY="11.0" prefHeight="54.0" prefWidth="26.0" style="-fx-background-color: #D5D8DC;" text="10" textFill="#6d7781">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="187.0" prefHeight="485.0" prefWidth="288.0" style="-fx-background-color: #D4E6F1;">
+         <children>
+            <Button fx:id="A" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#A_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="A">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="B" layoutX="82.0" layoutY="14.0" mnemonicParsing="false" onAction="#B_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="B">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="C" layoutX="154.0" layoutY="14.0" mnemonicParsing="false" onAction="#C_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="C">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="D" layoutX="222.0" layoutY="14.0" mnemonicParsing="false" onAction="#D_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="D">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="E" layoutX="16.0" layoutY="80.0" mnemonicParsing="false" onAction="#E_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="E">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="F" layoutX="84.0" layoutY="80.0" mnemonicParsing="false" onAction="#F_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="F">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="G" layoutX="156.0" layoutY="80.0" mnemonicParsing="false" onAction="#G_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="G">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="H" layoutX="224.0" layoutY="80.0" mnemonicParsing="false" onAction="#H_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="H">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="I" layoutX="14.0" layoutY="144.0" mnemonicParsing="false" onAction="#I_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="I">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="J" layoutX="82.0" layoutY="144.0" mnemonicParsing="false" onAction="#J_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="J">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="K" layoutX="154.0" layoutY="144.0" mnemonicParsing="false" onAction="#K_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="K">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="L" layoutX="222.0" layoutY="144.0" mnemonicParsing="false" onAction="#L_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="L">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="M" layoutX="14.0" layoutY="211.0" mnemonicParsing="false" onAction="#M_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="M">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="N" layoutX="82.0" layoutY="211.0" mnemonicParsing="false" onAction="#N_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="N">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="O" layoutX="154.0" layoutY="211.0" mnemonicParsing="false" onAction="#O_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="O">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="P" layoutX="222.0" layoutY="211.0" mnemonicParsing="false" onAction="#P_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="P">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="Q" layoutX="14.0" layoutY="282.0" mnemonicParsing="false" onAction="#Q_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="Q">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="R" layoutX="82.0" layoutY="282.0" mnemonicParsing="false" onAction="#R_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="R">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="S" layoutX="154.0" layoutY="282.0" mnemonicParsing="false" onAction="#S_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="S">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="T" layoutX="222.0" layoutY="282.0" mnemonicParsing="false" onAction="#T_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="T">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="U" layoutX="14.0" layoutY="348.0" mnemonicParsing="false" onAction="#U_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="U">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="V" layoutX="82.0" layoutY="348.0" mnemonicParsing="false" onAction="#V_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="V">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="W" layoutX="154.0" layoutY="348.0" mnemonicParsing="false" onAction="#W_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="W">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="X" layoutX="222.0" layoutY="348.0" mnemonicParsing="false" onAction="#X_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="X">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="Y" layoutX="84.0" layoutY="414.0" mnemonicParsing="false" onAction="#Y_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="Y">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="Z" layoutX="154.0" layoutY="414.0" mnemonicParsing="false" onAction="#Z_click" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #5499C7;" text="Z">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="329.0" layoutY="187.0" prefHeight="485.0" prefWidth="257.0" style="-fx-background-color: #D4E6F1; -fx-border-width: 5; -fx-border-color: #17202A;">
+         <children>
+            <Line fx:id="p1" endX="-69.79998779296875" endY="264.79998779296875" layoutX="104.0" layoutY="183.0" startX="-69.79998779296875" startY="-146.39999389648438" visible="false" />
+            <Line fx:id="p2" endX="28.79998779296875" layoutX="134.0" layoutY="36.0" startX="-100.0" visible="false" />
+            <Line fx:id="p3" endX="48.29998779296875" endY="-35.399993896484375" layoutX="115.0" layoutY="112.0" startX="48.29998779296875" startY="-76.0" visible="false" />
+            <Circle fx:id="head" fill="WHITE" layoutX="174.0" layoutY="97.0" radius="23.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Line fx:id="body" endX="-2.507080078125" endY="89.49295043945312" layoutX="152.0" layoutY="148.0" startX="23.0" startY="-27.0" visible="false" />
+            <Line fx:id="hand2" endX="19.5999755859375" endY="-64.39999389648438" layoutX="150.0" layoutY="214.0" startX="34.0" startY="-14.0" visible="false" />
+            <Line fx:id="hand1" endX="95.89288330078125" endY="-0.107086181640625" layoutX="73.0" layoutY="149.0" startX="122.79998779296875" startY="46.0" visible="false" />
+            <Line fx:id="foot1" endX="34.492919921875" endY="84.50711059570312" layoutX="115.0" layoutY="216.0" startX="34.492919921875" startY="22.907135009765625" visible="false" />
+            <Line fx:id="foot2" endX="33.78582763671875" endY="29.200042724609375" layoutX="115.0" layoutY="209.0" startX="20.0" startY="90.80001831054688" visible="false" />
+            <Label layoutX="82.0" layoutY="413.0" prefHeight="32.0" prefWidth="66.0" text="Time :">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="150.0" layoutY="414.0" prefHeight="34.0" prefWidth="46.0" text="10">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Line fx:id="soog" endX="-31.79998779296875" endY="65.39999389648438" layoutX="37.0" layoutY="54.0" startX="57.0" startY="-48.00000762939453" strokeWidth="8.0" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="97.0" prefHeight="77.0" prefWidth="572.0" style="-fx-background-color: #ABB2B9;">
+         <children>
+            <Label fx:id="l1" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="1.0" layoutX="14.0" layoutY="11.0" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #34495E;" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" visible="false">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="l2" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="1.0" layoutX="82.0" layoutY="11.0" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #34495E;" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" visible="false">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="l3" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="1.0" layoutX="153.0" layoutY="11.0" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #34495E;" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" visible="false">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="l4" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="1.0" layoutX="221.0" layoutY="11.0" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #34495E;" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" visible="false">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="l6" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="1.0" layoutX="361.0" layoutY="11.0" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #34495E;" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" visible="false">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="l7" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="1.0" layoutX="433.0" layoutY="11.0" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #34495E;" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" visible="false">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="l8" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="1.0" layoutX="506.0" layoutY="11.0" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #34495E;" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" visible="false">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="l5" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="1.0" layoutX="290.0" layoutY="11.0" prefHeight="54.0" prefWidth="52.0" style="-fx-background-color: #34495E;" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" visible="false">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorPane" focusTraversable="true" layoutX="202.0" layoutY="312.0" prefHeight="118.0" prefWidth="200.0" style="-fx-background-color: #ABB2B9;" visible="false">
+         <children>
+            <Label fx:id="l_message" layoutX="38.0" layoutY="14.0" prefHeight="54.0" prefWidth="123.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="68.0" prefHeight="34.0" prefWidth="138.0" text="back in main menu in 10s" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
